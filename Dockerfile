@@ -8,3 +8,4 @@ RUN pip install -r requirements.txt
 COPY . /code/
 COPY ./entrypoint.sh /code/entrypoint.sh
 RUN chmod +x /code/entrypoint.sh
+RUN python manage.py collectstatic --noinput
