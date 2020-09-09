@@ -1,0 +1,14 @@
+{% extends 'frontend/base.html' %}
+{% load bootstrap4 %}
+
+{% block pagename %}
+    Rock Paper Scissors Online
+{% endblock %}
+
+{% block content %}
+    {{ username|json_script:"user" }}
+    <div id="room"></div>
+
+    {% load static %}
+    <script src="{% static "frontend/index.js" %}"></script>
+{% endblock %}
